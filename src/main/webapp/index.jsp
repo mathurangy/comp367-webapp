@@ -1,5 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%
+    // Get current local time
+    java.time.LocalTime now = java.time.LocalTime.now();
+    String greeting;
+
+    if(now.isBefore(java.time.LocalTime.NOON)){
+        greeting = "Good morning, Mathu, Welcome to COMP367";
+    } else {
+        greeting = "Good afternoon, Mathu, Welcome to COMP367";
+    }
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +16,6 @@
 <title>COMP 367</title>
 </head>
 <body>
-<h1>Welcome to COMP367</h1>
+<h1>%= greeting %</h1>
 </body>
 </html>
