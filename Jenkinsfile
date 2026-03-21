@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/mathurangy/comp367-webapp'
+                git branch: 'main', url: 'https://github.com/mathurangy/comp367-webapp'
             }
         }
 
